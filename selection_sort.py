@@ -3,7 +3,8 @@ import random
 random_list = random.sample(xrange(0,10001),100)
 
 print "\nrandom list is: ",random_list,"\n"
-
+from datetime import datetime
+a = datetime.now()
 def selection_sort(arr):
     for i in range(0,len(arr)):
         low = i                                                     #goes through every index
@@ -14,3 +15,6 @@ def selection_sort(arr):
     return "sorted list is: %s"%(arr)
 
 print selection_sort(random_list)
+b = datetime.now()
+c = b-a
+print "runtime is ",c
